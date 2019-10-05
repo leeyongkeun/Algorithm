@@ -1,13 +1,13 @@
 import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.StringReader;
-import java.util.Arrays;
+import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class Solution_1266 {
 	public static int [] index = {2,3,5,7,11,13,17};
+	
 	public static void main(String[] args) throws Exception {
-		BufferedReader br = new BufferedReader(new StringReader(src));
+		//BufferedReader br = new BufferedReader(new StringReader(src));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int TC = Integer.parseInt(br.readLine());
 		
 		for (int tc = 1; tc <= TC; tc++) {
@@ -15,7 +15,7 @@ public class Solution_1266 {
 			int masterA = Integer.parseInt(st.nextToken());
 			int masterB = Integer.parseInt(st.nextToken());
 			System.out.print("#"+tc+" ");
-			System.out.printf("%.6f \n",1-(1-(Calc(masterA)*Calc(masterB))));
+			System.out.printf("%.6f \n",(Calc(masterA)+Calc(masterB)-(Calc(masterA)*Calc(masterB))));
 		}//tc
 		
 	}//main
